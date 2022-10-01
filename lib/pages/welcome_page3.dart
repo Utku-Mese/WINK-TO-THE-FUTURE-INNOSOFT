@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:wink_to_the_future/pages/welcome_page2.dart';
-import 'package:wink_to_the_future/pages/welcome_page_1.dart';
+import 'package:wink_to_the_future/pages/welcome_page4.dart';
 
 import '../texts/english.dart';
 
@@ -95,7 +95,7 @@ class _WelcomePage3State extends State<WelcomePage3> {
                     onPressed: () {
                       Navigator.of(context).push(
                         MaterialPageRoute(
-                          builder: (context) => const WelcomePage1(),
+                          builder: (context) => const WelcomePage4(),
                         ),
                       );
                     },

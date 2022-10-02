@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:wink_to_the_future/pages/welcome_page3.dart';
-import 'package:wink_to_the_future/pages/welcome_page5.dart';
+import 'package:wink_to_the_future/pages/home_page.dart';
+import 'package:wink_to_the_future/pages/welcome_page4.dart';
 import 'package:wink_to_the_future/texts/english.dart';
 
-class WelcomePage4 extends StatefulWidget {
-  const WelcomePage4({super.key});
+class WelcomePage5 extends StatefulWidget {
+  const WelcomePage5({super.key});
 
   @override
-  State<WelcomePage4> createState() => _WelcomePage4State();
+  State<WelcomePage5> createState() => _WelcomePage5State();
 }
 
-class _WelcomePage4State extends State<WelcomePage4> {
+class _WelcomePage5State extends State<WelcomePage5> {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -39,7 +39,7 @@ class _WelcomePage4State extends State<WelcomePage4> {
               ),
               width: size.width * 0.87,
               child: Image.asset(
-                "assets/PopUp3 (1).png",
+                "assets/PopUp4.png",
                 fit: BoxFit.contain,
               ),
             ),
@@ -59,17 +59,15 @@ class _WelcomePage4State extends State<WelcomePage4> {
                     onPressed: () {
                       Navigator.of(context).push(
                         MaterialPageRoute(
-                          builder: (context) => const WelcomePage3(),
+                          builder: (context) => const WelcomePage4(),
                         ),
                       );
                     },
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
-                        const Icon(
-                          Icons.arrow_back_ios_new_rounded,
-                          color: Colors.white,
-                        ),
+                        const Icon(Icons.arrow_back_ios_new_rounded,
+                            color: Colors.white),
                         Text(
                           enPrevious,
                           style: GoogleFonts.inter(
@@ -94,7 +92,7 @@ class _WelcomePage4State extends State<WelcomePage4> {
                     onPressed: () {
                       Navigator.of(context).push(
                         MaterialPageRoute(
-                          builder: (context) => const WelcomePage5(),
+                          builder: (context) => const MyHomePage(),
                         ),
                       );
                     },
@@ -102,7 +100,7 @@ class _WelcomePage4State extends State<WelcomePage4> {
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
                         Text(
-                          enNext,
+                          'DONE',
                           style: GoogleFonts.inter(
                             textStyle: const TextStyle(
                               fontSize: 17,

@@ -2,17 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:wink_to_the_future/pages/about.dart';
-import 'package:wink_to_the_future/pages/save_the_world.dart';
+import 'package:wink_to_the_future/pages/home_page.dart';
 import 'package:wink_to_the_future/pages/scientific_projeckts.dart';
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key});
+class SaveTheWorld extends StatefulWidget {
+  const SaveTheWorld({super.key});
 
   @override
-  State<MyHomePage> createState() => _MyHomePageState();
+  State<SaveTheWorld> createState() => _SaveTheWorldState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _SaveTheWorldState extends State<SaveTheWorld> {
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
@@ -32,15 +32,22 @@ class _MyHomePageState extends State<MyHomePage> {
             Padding(
               padding: const EdgeInsets.only(left: 40.0),
               child: ListTile(
+                onTap: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (context) => const MyHomePage(),
+                    ),
+                  );
+                },
                 title: Text(
                   'Home page',
                   style: GoogleFonts.inter(
-                    textStyle: const TextStyle(color: Colors.red),
+                    textStyle: const TextStyle(color: Colors.black),
                   ),
                 ),
                 leading: const Icon(
                   Icons.home,
-                  color: Colors.red,
+                  color: Colors.black,
                 ),
               ),
             ),
@@ -60,12 +67,12 @@ class _MyHomePageState extends State<MyHomePage> {
                 title: Text(
                   'Save the world',
                   style: GoogleFonts.inter(
-                    textStyle: const TextStyle(color: Colors.black),
+                    textStyle: const TextStyle(color: Colors.red),
                   ),
                 ),
                 leading: const Icon(
                   FontAwesomeIcons.earthAfrica,
-                  color: Colors.black,
+                  color: Colors.red,
                 ),
               ),
             ),
@@ -124,7 +131,7 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Stack(
         children: [
-          const Center(child: Text('home')),
+          const Center(child: Text('save')),
           Column(
             children: [
               Container(
@@ -163,15 +170,22 @@ class _MyHomePageState extends State<MyHomePage> {
                     const SizedBox(
                       height: 45,
                     ),
-                    const Icon(
-                      Icons.home,
-                      color: Colors.red,
+                    IconButton(
+                      onPressed: () {
+                        Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: (context) => const MyHomePage(),
+                          ),
+                        );
+                      },
+                      icon: const Icon(Icons.home),
+                      color: Colors.black,
                     ),
                     const Padding(
                       padding: EdgeInsets.symmetric(horizontal: 7),
                       child: Divider(
                         thickness: 2,
-                        color: Colors.red,
+                        color: Colors.black,
                       ),
                     ),
                     const SizedBox(
@@ -186,13 +200,13 @@ class _MyHomePageState extends State<MyHomePage> {
                         );
                       },
                       icon: const Icon(FontAwesomeIcons.earthAfrica),
-                      color: Colors.black,
+                      color: Colors.red,
                     ),
                     const Padding(
                       padding: EdgeInsets.symmetric(horizontal: 7),
                       child: Divider(
                         thickness: 2,
-                        color: Colors.black,
+                        color: Colors.red,
                       ),
                     ),
                     const SizedBox(

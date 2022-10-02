@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:wink_to_the_future/pages/comming.dart';
 import 'package:wink_to_the_future/pages/welcome_page2.dart';
 import 'package:wink_to_the_future/texts/english.dart';
 
@@ -11,7 +12,14 @@ class WelcomePage1 extends StatefulWidget {
 }
 
 class _WelcomePage1State extends State<WelcomePage1> {
-  String lenguages = "english";
+  String _lenguages = "english";
+
+  String get lenguages => _lenguages;
+
+  set lenguages(String lenguages) {
+    _lenguages = lenguages;
+  }
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -74,7 +82,7 @@ class _WelcomePage1State extends State<WelcomePage1> {
                         lenguages = "turkish";
                         Navigator.of(context).push(
                           MaterialPageRoute(
-                            builder: (context) => const WelcomePage2(),
+                            builder: (context) => const CommingSoon(),
                           ),
                         );
                       },

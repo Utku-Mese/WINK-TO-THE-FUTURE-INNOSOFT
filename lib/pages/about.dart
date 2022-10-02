@@ -22,7 +22,7 @@ class _AboutState extends State<About> {
     return Scaffold(
       key: _scaffoldKey,
       drawer: Drawer(
-        backgroundColor: Colors.white70,
+        backgroundColor: Colors.white70.withOpacity(0.90),
         child: ListView(
           children: [
             DrawerHeader(child: Image.asset('assets/2.png')),
@@ -124,13 +124,19 @@ class _AboutState extends State<About> {
                 title: Text(
                   'About',
                   style: GoogleFonts.inter(
-                    textStyle: const TextStyle(color: Colors.red),
+                    textStyle: const TextStyle(color: Color(0xff21B8CB)),
                   ),
                 ),
                 leading: const Icon(
                   FontAwesomeIcons.circleInfo,
-                  color: Colors.red,
+                  color: Color(0xff21B8CB),
                 ),
+              ),
+            ),
+            const Padding(
+              padding: EdgeInsets.only(top: 250.0, left: 25),
+              child: ListTile(
+                title: Text('Made By INNOSOFT'),
               ),
             ),
           ],
@@ -138,125 +144,183 @@ class _AboutState extends State<About> {
       ),
       body: Stack(
         children: [
-          const Center(child: Text('about')),
-          Column(
+          Row(
             children: [
-              Container(
-                height: size.height,
-                width: 50,
-                decoration: const BoxDecoration(
-                  color: Colors.white,
-                  boxShadow: [
-                    BoxShadow(color: Colors.grey, blurRadius: 5),
-                  ],
-                ),
-                child: Column(
-                  children: [
-                    SafeArea(
-                      child: IconButton(
-                        onPressed: () =>
-                            _scaffoldKey.currentState?.openDrawer(),
-                        icon: const Icon(
-                          Icons.menu,
-                          size: 35,
+              Column(
+                children: [
+                  Container(
+                    height: size.height,
+                    width: 50,
+                    decoration: const BoxDecoration(
+                      color: Colors.white,
+                      boxShadow: [
+                        BoxShadow(color: Colors.grey, blurRadius: 5),
+                      ],
+                    ),
+                    child: Column(
+                      children: [
+                        SafeArea(
+                          child: IconButton(
+                            onPressed: () =>
+                                _scaffoldKey.currentState?.openDrawer(),
+                            icon: const Icon(
+                              Icons.menu,
+                              size: 35,
+                              color: Colors.black,
+                            ),
+                          ),
+                        ),
+                        const SizedBox(
+                          height: 45,
+                        ),
+                        RotatedBox(
+                          quarterTurns: -1,
+                          child: Text(
+                            'INNOSOFT',
+                            style: GoogleFonts.inter(
+                                textStyle: const TextStyle(fontSize: 20)),
+                          ),
+                        ),
+                        const SizedBox(
+                          height: 45,
+                        ),
+                        IconButton(
+                          onPressed: () {
+                            Navigator.of(context).push(
+                              MaterialPageRoute(
+                                builder: (context) => const MyHomePage(),
+                              ),
+                            );
+                          },
+                          icon: const Icon(Icons.home),
                           color: Colors.black,
+                        ),
+                        const Padding(
+                          padding: EdgeInsets.symmetric(horizontal: 7),
+                          child: Divider(
+                            thickness: 2,
+                            color: Colors.black,
+                          ),
+                        ),
+                        const SizedBox(
+                          height: 25,
+                        ),
+                        IconButton(
+                          onPressed: () {
+                            Navigator.of(context).push(
+                              MaterialPageRoute(
+                                builder: (context) => const SaveTheWorld(),
+                              ),
+                            );
+                          },
+                          icon: const Icon(FontAwesomeIcons.earthAfrica),
+                          color: Colors.black,
+                        ),
+                        const Padding(
+                          padding: EdgeInsets.symmetric(horizontal: 7),
+                          child: Divider(
+                            thickness: 2,
+                            color: Colors.black,
+                          ),
+                        ),
+                        const SizedBox(
+                          height: 25,
+                        ),
+                        IconButton(
+                          onPressed: () {
+                            Navigator.of(context).push(
+                              MaterialPageRoute(
+                                builder: (context) =>
+                                    const ScientificProjeckts(),
+                              ),
+                            );
+                          },
+                          icon: const Icon(FontAwesomeIcons.flask),
+                          color: Colors.black,
+                        ),
+                        const Padding(
+                          padding: EdgeInsets.symmetric(horizontal: 7),
+                          child: Divider(
+                            thickness: 2,
+                            color: Colors.black,
+                          ),
+                        ),
+                        const SizedBox(
+                          height: 25,
+                        ),
+                        IconButton(
+                          onPressed: () {
+                            null;
+                          },
+                          icon: const Icon(FontAwesomeIcons.circleInfo),
+                          color: const Color(0xff21B8CB),
+                        ),
+                        const Padding(
+                          padding: EdgeInsets.symmetric(horizontal: 7),
+                          child: Divider(
+                            thickness: 2,
+                            color: Color(0xff21B8CB),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+              Column(
+                children: [
+                  SafeArea(
+                    child: Padding(
+                      padding: const EdgeInsets.only(left: 15.0, top: 15),
+                      child: Text(
+                        'About Us',
+                        style: GoogleFonts.inter(
+                          textStyle: TextStyle(
+                            color: Colors.grey[800],
+                            fontWeight: FontWeight.w700,
+                            fontSize: 55,
+                            decoration: TextDecoration.none,
+                          ),
                         ),
                       ),
                     ),
-                    const SizedBox(
-                      height: 45,
-                    ),
-                    RotatedBox(
-                      quarterTurns: -1,
-                      child: Text(
-                        'INNOSOFT',
-                        style: GoogleFonts.inter(
-                            textStyle: const TextStyle(fontSize: 20)),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(top: 40.0, left: 5),
+                    child: Text(
+                      'Team mambers;',
+                      style: GoogleFonts.inter(
+                        textStyle: TextStyle(
+                          color: Colors.grey[800],
+                          fontWeight: FontWeight.w500,
+                          fontSize: 30,
+                          decoration: TextDecoration.none,
+                        ),
                       ),
                     ),
-                    const SizedBox(
-                      height: 45,
-                    ),
-                    IconButton(
-                      onPressed: () {
-                        Navigator.of(context).push(
-                          MaterialPageRoute(
-                            builder: (context) => const MyHomePage(),
-                          ),
-                        );
-                      },
-                      icon: const Icon(Icons.home),
-                      color: Colors.black,
-                    ),
-                    const Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 7),
-                      child: Divider(
-                        thickness: 2,
-                        color: Colors.black,
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(top: 25.0),
+                    child: Text(
+                      '''
+-Yaren Nur SOLMAZ
+-Mehmet Utku MESE
+-Yunus Emre OZEN
+-Ali Efe BOZDAS
+-Mahmut Sami 
+-Abdullah Enes KARAPINAR''',
+                      style: GoogleFonts.inter(
+                        textStyle: TextStyle(
+                          color: Colors.grey[800],
+                          fontWeight: FontWeight.w400,
+                          fontSize: 20,
+                          decoration: TextDecoration.none,
+                        ),
                       ),
                     ),
-                    const SizedBox(
-                      height: 25,
-                    ),
-                    IconButton(
-                      onPressed: () {
-                        Navigator.of(context).push(
-                          MaterialPageRoute(
-                            builder: (context) => const SaveTheWorld(),
-                          ),
-                        );
-                      },
-                      icon: const Icon(FontAwesomeIcons.earthAfrica),
-                      color: Colors.black,
-                    ),
-                    const Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 7),
-                      child: Divider(
-                        thickness: 2,
-                        color: Colors.black,
-                      ),
-                    ),
-                    const SizedBox(
-                      height: 25,
-                    ),
-                    IconButton(
-                      onPressed: () {
-                        Navigator.of(context).push(
-                          MaterialPageRoute(
-                            builder: (context) => const ScientificProjeckts(),
-                          ),
-                        );
-                      },
-                      icon: const Icon(FontAwesomeIcons.flask),
-                      color: Colors.black,
-                    ),
-                    const Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 7),
-                      child: Divider(
-                        thickness: 2,
-                        color: Colors.black,
-                      ),
-                    ),
-                    const SizedBox(
-                      height: 25,
-                    ),
-                    IconButton(
-                      onPressed: () {
-                        null;
-                      },
-                      icon: const Icon(FontAwesomeIcons.circleInfo),
-                      color: Colors.red,
-                    ),
-                    const Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 7),
-                      child: Divider(
-                        thickness: 2,
-                        color: Colors.red,
-                      ),
-                    ),
-                  ],
-                ),
-              ),
+                  )
+                ],
+              )
             ],
           ),
         ],

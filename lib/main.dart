@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:wink_to_the_future/pages/welcome_page_1.dart';
+import 'package:wink_to_the_future/pages/welcome_page2.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +17,7 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: WelcomePage1(),
+      home: WelcomePage2(),
     );
   }
 }

@@ -3,6 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:wink_to_the_future/pages/welcome_page3.dart';
 import 'package:wink_to_the_future/pages/welcome_page_1.dart';
 import 'package:wink_to_the_future/texts/english.dart';
+import 'package:wink_to_the_future/texts/turkish.dart';
 
 class WelcomePage2 extends StatefulWidget {
   const WelcomePage2({super.key});
@@ -12,6 +13,7 @@ class WelcomePage2 extends StatefulWidget {
 }
 
 class _WelcomePage2State extends State<WelcomePage2> {
+
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;

@@ -271,7 +271,7 @@ class _AboutState extends State<About> {
                 children: [
                   SafeArea(
                     child: Padding(
-                      padding: const EdgeInsets.only(left: 15.0, top: 15),
+                      padding: const EdgeInsets.only(left: 5.0, top: 15),
                       child: Text(
                         'About Us',
                         style: GoogleFonts.inter(
@@ -283,6 +283,16 @@ class _AboutState extends State<About> {
                           ),
                         ),
                       ),
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 30,
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 25.0),
+                    child: Image.asset(
+                      'assets/members.jpeg',
+                      width: 300,
                     ),
                   ),
                   Padding(
@@ -307,7 +317,7 @@ class _AboutState extends State<About> {
 -Mehmet Utku MESE
 -Yunus Emre OZEN
 -Ali Efe BOZDAS
--Mahmut Sami 
+-Mahmut Sami Boz
 -Abdullah Enes KARAPINAR''',
                       style: GoogleFonts.inter(
                         textStyle: TextStyle(
@@ -318,7 +328,7 @@ class _AboutState extends State<About> {
                         ),
                       ),
                     ),
-                  )
+                  ),
                 ],
               )
             ],

@@ -4,7 +4,7 @@ A new Flutter project.
 
 ## Getting Started
 
-Youtube: https://www.youtube.com/watch?v=0uCoI07WcVM&t=35s&ab_channel=MehmetUtkuMe%C5%9Fe
+Youtube: https://youtu.be/xPwoLuFRq8w
 
 
 
